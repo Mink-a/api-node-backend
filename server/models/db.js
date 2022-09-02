@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://cluster0.otjqore.mongodb.net/Movies?retryWrites=true&w=majority",
+  "mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.otjqore.mongodb.net/Movies?retryWrites=true&w=majority",
   {
     user: process.env.MONGO_USER,
     pass: process.env.MONGO_PASSWORD,
